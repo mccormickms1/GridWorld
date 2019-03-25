@@ -19,6 +19,8 @@
 
 // package part4;
 
+import java.awt.Color;
+
 import info.gridworld.actor.Actor;
 import info.gridworld.actor.Critter;
 import info.gridworld.grid.Location;
@@ -32,7 +34,7 @@ import java.util.ArrayList;
  */
 public class ChameleonCritter extends Critter {
 	
-	private static final double DARKENING_FACTOR = 0.1;
+	private static final double DARKENING_FACTOR = 0.05;
 
 	/**
 	 * Randomly selects a neighbor and changes this critter's color to be the
@@ -56,10 +58,8 @@ public class ChameleonCritter extends Critter {
 		int green = (int) (c.getGreen() * (1 - DARKENING_FACTOR));   
 		int blue = (int) (c.getBlue() * (1 - DARKENING_FACTOR));
 
-		setColor(new Color(red, gree, blue));
+		setColor(new Color(red, green, blue));
 	} 
- 
-  setColor(new Color(red, green, blue));    }  
 
 	/**
 	 * Turns towards the new location as it moves.
